@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gproc
+
+Files: *
+Copyright: 2009-2015 Ulf Wiger <ulf@wiger.net>
+
+License: Erlang Public License, Version 1.0

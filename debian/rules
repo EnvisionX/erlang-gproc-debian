@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	rebar compile
+
+override_dh_auto_test:
+
+# Implement staged installation
+DESTDIR = debian/erlang-gproc
+VERSION = 0.3.1
+ERL_APP_DESTDIR = $(DESTDIR)/usr/lib/erlang/lib/gproc-$(VERSION)/ebin
+override_dh_install:
+	install -m 755 -d $(ERL_APP_DESTDIR)
+	install -m 644 ebin/*.app ebin/*.beam $(ERL_APP_DESTDIR)

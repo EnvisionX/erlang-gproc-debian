@@ -1,0 +1,5 @@
+erlang-gproc (0.3.1) unstable; urgency=low
+
+  * Initial release for Debian.
+
+ -- Aleksey Morarash <aleksey.morarash@envisionx.co>  Sun, 22 Mar 2015 11:24:00 +0200

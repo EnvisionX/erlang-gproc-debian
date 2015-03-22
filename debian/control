@@ -1,0 +1,30 @@
+Source: erlang-gproc
+Section: devel
+Priority: extra
+Maintainer: Aleksey Morarash <aleksey.morarash@envisionx.co>
+Build-Depends: debhelper (>= 8.0.0), erlang-base, rebar, git,
+ erlang-edown, erlang-gen-leader
+Standards-Version: 3.9.3
+Homepage: https://github.com/uwiger/gproc/
+
+Package: erlang-gproc
+Architecture: all
+Depends: erlang-base, erlang-gen-leader
+Description: Extended process registry for Erlang
+ Gproc is a process dictionary for Erlang, which provides a
+ number of useful features beyond what the built-in dictionary has:
+ .
+ - Use any term as a process alias;
+ - Register a process under several aliases;
+ - Non-unique properties can be registered simultaneously by
+   many processes;
+ - QLC and match specification interface for efficient queries
+   on the dictionary;
+ - Await registration, let's you wait until a process registers
+   itself;
+ - Atomically give away registered names and properties to another
+   process;
+ - Counters, and aggregated counters, which automatically maintain
+   the total of all counters with a given name;
+ - Global registry, with all the above functions applied to
+   a network of nodes.
